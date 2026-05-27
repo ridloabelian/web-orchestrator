@@ -1,0 +1,10 @@
+version: 1
+agent:
+  extend: default
+  name: Web Automation Orchestrator
+  system_prompt_path: ./web-automation-orchestrator.md
+  system_prompt_args:
+    BROWSEROS_API_KEY: ${BROWSEROS_API_KEY}
+  when_to_use: >
+    Use this agent for browser automation tasks that should prioritize DOM,
+    accessibility tree, and semantic snapshots over screenshot-based workflows.
