@@ -10,6 +10,7 @@ The core idea is simple: avoid screenshot-first automation. Start with DOM parsi
 
 - `web-automation-orchestrator.md` - the universal system prompt for AI coding agents.
 - `web-automation-orchestrator.agent.yaml` - an optional Kimi CLI v1.44-compatible adapter that loads the same prompt.
+- `adapters/` - ready-to-copy adapter pack for Codex, Claude Code, Gemini CLI, Aider, Kimi, Antigravity, OpenCoe, and generic agent runtimes.
 - `README.md` - usage and setup notes.
 
 ## Supported Agent Targets
@@ -24,6 +25,23 @@ This project is intended for any AI coding agent that can read project-level ins
 - Aider
 - Kimi
 - Other coding agents and agent frameworks
+
+## Adapter Pack
+
+Use the adapter pack when you want the orchestrator to load automatically through an agent's native project-instruction mechanism.
+
+| Agent/runtime | Adapter path | Target file |
+| --- | --- | --- |
+| Codex and AGENTS.md-compatible agents | `adapters/codex/AGENTS.md` | `AGENTS.md` |
+| Claude Code | `adapters/claude-code/CLAUDE.md` | `CLAUDE.md` |
+| Gemini CLI | `adapters/gemini-cli/GEMINI.md` | `GEMINI.md` |
+| Aider | `adapters/aider/CONVENTIONS.md` and `adapters/aider/.aider.conf.yml` | `CONVENTIONS.md` and `.aider.conf.yml` |
+| Kimi CLI | `web-automation-orchestrator.agent.yaml` | `web-automation-orchestrator.agent.yaml` |
+| Antigravity | `adapters/antigravity/INSTRUCTIONS.md` | project/custom instructions |
+| OpenCoe | `adapters/opencoe/INSTRUCTIONS.md` | project/custom instructions |
+| Other agents | `adapters/generic/PROJECT_INSTRUCTIONS.md` | project/custom instructions |
+
+See [adapters/README.md](adapters/README.md) for copy commands and runtime notes.
 
 ## Tool Routing
 
